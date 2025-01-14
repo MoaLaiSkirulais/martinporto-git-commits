@@ -1,0 +1,54 @@
+{
+    "manifestVersion": 1,
+    "id": "martinporto-git-commits",
+    "version": "1.0.0",
+    "name": "Display git commits",
+    "description": "Display git commits",
+    "publisher": "martinporto",
+    "categories": ["Azure Boards"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "img/logo.png"
+    },
+    "contributions": [
+        {
+            "id": "HelloWorldWidget",
+            "type": "ms.vss-dashboards-web.widget",
+            "targets": [
+                "ms.vss-dashboards-web.widget-catalog"
+            ],
+            "properties": {
+                "name": "martinporto-git-commits",
+                "description": "martinporto-git-commits",
+                "catalogIconUrl": "img/CatalogIcon.png",
+                "previewImageUrl": "img/preview.png",
+                "uri": "index.html",
+                "supportedSizes": [
+                    {
+                        "rowSpan": 1,
+                        "columnSpan": 2
+                    }
+                ],
+                "supportedScopes": ["project_team"]
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "index.html",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true
+        },
+        {
+            "path": "img",
+            "addressable": true
+        }
+    ]
+}
